@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing-Widget</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.0.2/mocha.css"
+    />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mocha/9.0.2/mocha.min.js"
+      charset="utf-8"
+    ></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.min.js"></script>
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script>
+      mocha.setup("bdd");
+      var assert = chai.assert;
+    </script>
+    <script src="settingsBill.js" charset="utf-8"></script>
+    <script src="test/settingsBill.tests.js" charset="utf-8"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.run();
+    </script>
+  </body>
+</html>
